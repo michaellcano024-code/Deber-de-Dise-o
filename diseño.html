@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diseño y Desarrollo Web</title>
+
+
+    <style>
+
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e2e8f0;
+            font-family: Verdana, Arial, sans-serif;
+            color: #334155;
+        }
+
+
+        /* =========================
+           CONTENEDOR
+        ========================= */
+
+        #contenedor {
+            width: 85%;
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
+        }
+
+
+        /* =========================
+           TÍTULO PRINCIPAL
+        ========================= */
+
+        h1 {
+            color: #1e3a8a;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           TÍTULOS SECUNDARIOS
+        ========================= */
+
+        h2 {
+            color: #2563eb;
+            border-bottom: 2px solid #93c5fd;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        h3 {
+            color: #1e3a8a;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           PÁRRAFOS
+        ========================= */
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           LISTAS
+        ========================= */
+
+        ul {
+            margin-left: 25px;
+            padding-left: 10px;
+        }
+
+        li {
+            font-size: 16px;
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           INFORMACIÓN DESTACADA
+        ========================= */
+
+        .destacado {
+            background-color: #eff6ff;
+            border-left: 5px solid #2563eb;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .destacado b {
+            color: #1e3a8a;
+        }
+
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        .seccion {
+            background-color: #f8fafc;
+            padding: 18px;
+            margin-top: 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+
+        /* =========================
+           BOTÓN
+        ========================= */
+
+        .button-container {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+        }
+
+        button {
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(37, 99, 235, 0.30);
+        }
+
+
+        /* =========================
+           PIE DE PÁGINA
+        ========================= */
+
+        #pie {
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        #pie p {
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #64748b;
+        }
+
+        .footer p {
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           ADAPTACIÓN PARA CELULARES
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            #contenedor {
+                width: 95%;
+                padding: 20px;
+                margin: 15px auto;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p,
+            li {
+                font-size: 15px;
+            }
+
+            button {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div id="contenedor">
+
+
+    <!-- TÍTULO -->
+
+    <h1>
+        DISEÑO Y DESARROLLO WEB
+    </h1>
+
+
+    <!-- INTRODUCCIÓN -->
+
+    <div class="destacado">
+
+        <p>
+            El <b>Diseño y Desarrollo Web</b> es el proceso de crear
+            y organizar páginas y sitios web para que sean atractivos,
+            fáciles de usar y funcionen correctamente.
+        </p>
+
+    </div>
+
+
+    <!-- ¿QUÉ SE APRENDE? -->
+
+    <h2>
+        ¿Qué se aprende en esta materia?
+    </h2>
+
+    <ul>
+
+        <li>Crear y organizar páginas web.</li>
+
+        <li>Diseñar la apariencia de un sitio.</li>
+
+        <li>Elegir colores, tipos de letra y fondos.</li>
+
+        <li>Colocar imágenes, videos y textos.</li>
+
+        <li>Crear menús y botones.</li>
+
+        <li>Organizar la información de una página.</li>
+
+        <li>Crear enlaces entre diferentes páginas.</li>
+
+        <li>Diseñar páginas para computadoras, tablets y celulares.</li>
+
+        <li>Mejorar la presentación y facilidad de uso de un sitio web.</li>
+
+    </ul>
+
+
+    <!-- PARTES DE UNA PÁGINA -->
+
+    <h2>
+        Partes de una página web
+    </h2>
+
+
+    <div class="seccion">
+
+        <h3>
+            Encabezado
+        </h3>
+
+        <p>
+            Es la parte superior de la página y puede contener
+            el nombre, logo o título.
+        </p>
+
+
+        <h3>
+            Menú
+        </h3>
+
+        <p>
+            Permite navegar por las diferentes partes del sitio
+            mediante enlaces.
+        </p>
+
+
+        <h3>
+            Contenido
+        </h3>
+
+        <p>
+            Contiene la información principal, como textos,
+            imágenes y videos.
+        </p>
+
+
+        <h3>
+            Pie de página
+        </h3>
+
+        <p>
+            Se encuentra al final de la página y puede incluir
+            información de contacto, derechos de autor u otros datos.
+        </p>
+
+    </div>
+
+
+    <!-- IMPORTANCIA -->
+
+    <h2>
+        Importancia
+    </h2>
+
+    <p>
+        El diseño web es importante porque permite presentar
+        información de forma <b>ordenada, clara y atractiva</b>.
+        Una buena página debe ser fácil de entender y utilizar.
+    </p>
+
+
+    <!-- CARACTERÍSTICAS -->
+
+    <h2>
+        Características de una buena página web
+    </h2>
+
+    <ul>
+
+        <li>Fácil de usar.</li>
+
+        <li>Buena organización.</li>
+
+        <li>Diseño atractivo.</li>
+
+        <li>Información clara.</li>
+
+        <li>Buena combinación de colores.</li>
+
+        <li>Texto fácil de leer.</li>
+
+        <li>Imágenes adecuadas.</li>
+
+        <li>Adaptable a diferentes dispositivos.</li>
+
+    </ul>
+
+
+    <!-- BOTÓN -->
+
+    <div class="button-container">
+
+        <a href="https://michaellcano024-code.github.io/Deber-de-Dise-o/">
+
+            <button>
+                Volver al menú principal
+            </button>
+
+        </a>
+
+    </div>
+
+
+    <!-- INFORMACIÓN DEL PROYECTO -->
+
+    <div class="footer">
+
+
+    </div>
+
+
+    <!-- PIE -->
+
+    <div id="pie">
+
+        <p>
+            <b>Diseño y Desarrollo Web</b>
+            <br>
+            Cano Michaell &nbsp; | &nbsp; Macias Yolanda
+            <br>
+            Curso: 3ro BT "B"
+        </p>
+   <p>
+            © 2026 Mi Sitio Web. Todos los derechos reservados.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
+
