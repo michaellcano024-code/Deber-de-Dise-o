@@ -1,420 +1,308 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-ES">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="utf-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo uso del elemento div y del atributo id</title>
 
-    <title>Diseño y Desarrollo Web</title>
+<style>
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <style>
+a:link,
+a:visited {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+}
 
-        /* =========================
-           CONFIGURACIÓN GENERAL
-        ========================= */
+a:hover {
+    color: #93c5fd;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+    background: #e2e8f0;
+    font-family: Verdana, Arial, sans-serif;
+}
 
-        body {
-            background-color: #e2e8f0;
-            font-family: Verdana, Arial, sans-serif;
-            color: #334155;
-        }
+h1 {
+    color: #2563eb;
+    font-size: 24px;
+}
 
+h2 {
+    color: #1e3a8a;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 
-        /* =========================
-           CONTENEDOR
-        ========================= */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
 
-        #contenedor {
-            width: 85%;
-            max-width: 900px;
-            margin: 30px auto;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
-        }
+ul {
+    list-style-type: none;
+}
 
+#contenedor {
+    margin: 30px auto;
+    width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
+}
 
-        /* =========================
-           TÍTULO PRINCIPAL
-        ========================= */
+#cabecera {
+    color: #ffffff;
+    background-color: #1e3a8a;
+    padding: 20px;
+    text-align: center;
+}
 
-        h1 {
-            color: #1e3a8a;
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 25px;
-        }
+#cabecera h1 {
+    color: #ffffff;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
 
+#cabecera img {
+    width: 100px;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 8px;
+}
 
-        /* =========================
-           TÍTULOS SECUNDARIOS
-        ========================= */
+#menu {
+    background-color: #334155;
+    float: left;
+    height: 500px;
+    padding: 20px 15px;
+    width: 180px;
+}
 
-        h2 {
-            color: #2563eb;
-            border-bottom: 2px solid #93c5fd;
-            padding-bottom: 8px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
+#menu li {
+    margin-bottom: 10px;
+}
 
-        h3 {
-            color: #1e3a8a;
-            margin-top: 18px;
-            margin-bottom: 8px;
-        }
+#menu a {
+    display: block;
+    background-color: #1e293b;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
 
+#menu a:hover {
+    background-color: #2563eb;
+    transform: translateX(4px);
+}
 
-        /* =========================
-           PÁRRAFOS
-        ========================= */
+#contenido {
+    margin-left: 180px;
+    min-height: 500px;
+    padding: 25px;
+    background-color: #ffffff;
+}
 
-        p {
-            font-size: 16px;
-            line-height: 1.7;
-        }
+#contenido h1 {
+    color: #2563eb;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
 
+#contenido h2 {
+    margin-top: 18px;
+}
 
-        /* =========================
-           LISTAS
-        ========================= */
+#contenido p {
+    color: #334155;
+    margin-bottom: 10px;
+}
 
-        ul {
-            margin-left: 25px;
-            padding-left: 10px;
-        }
+#contenido ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    color: #334155;
+}
 
-        li {
-            font-size: 16px;
-            margin: 8px 0;
-            line-height: 1.5;
-        }
+#contenido li {
+    margin-bottom: 7px;
+}
 
+.informacion {
+    background-color: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 5px;
+}
 
-        /* =========================
-           INFORMACIÓN DESTACADA
-        ========================= */
+#pie {
+    background-color: #1e293b;
+    clear: both;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
 
-        .destacado {
-            background-color: #eff6ff;
-            border-left: 5px solid #2563eb;
-            padding: 18px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
+#pie p {
+    font-size: 14px;
+    line-height: 1.7;
+}
 
-        .destacado b {
-            color: #1e3a8a;
-        }
+#pie strong {
+    color: #93c5fd;
+}
 
-
-        /* =========================
-           SECCIONES
-        ========================= */
-
-        .seccion {
-            background-color: #f8fafc;
-            padding: 18px;
-            margin-top: 15px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-        }
-
-
-        /* =========================
-           BOTÓN
-        ========================= */
-
-        .button-container {
-            text-align: center;
-            margin-top: 35px;
-        }
-
-        .button-container a {
-            text-decoration: none;
-        }
-
-        button {
-            background-color: #1e3a8a;
-            color: white;
-            border: none;
-            padding: 13px 25px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: #2563eb;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 12px rgba(37, 99, 235, 0.30);
-        }
-
-
-        /* =========================
-           PIE DE PÁGINA
-        ========================= */
-
-        #pie {
-            background-color: #1e293b;
-            color: white;
-            text-align: center;
-            padding: 18px;
-            margin-top: 30px;
-            border-radius: 10px;
-        }
-
-        #pie p {
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #64748b;
-        }
-
-        .footer p {
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           ADAPTACIÓN PARA CELULARES
-        ========================= */
-
-        @media (max-width: 700px) {
-
-            #contenedor {
-                width: 95%;
-                padding: 20px;
-                margin: 15px auto;
-            }
-
-            h1 {
-                font-size: 25px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            p,
-            li {
-                font-size: 15px;
-            }
-
-            button {
-                width: 100%;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
 
 <body>
 
-
 <div id="contenedor">
 
 
-    <!-- TÍTULO -->
+    <!-- CABECERA -->
 
-    <h1>
-        DISEÑO Y DESARROLLO WEB
-    </h1>
+    <div id="cabecera">
+
+        <h1>
+            UNIDAD EDUCATIVA FISCAL
+            REPLICA VICENTE ROCAFUERTE
+        </h1>
+
+        <img src="logo.jpg"
+             width="100"
+             height="110"
+             alt="Logo de la institución">
+
+    </div>
 
 
-    <!-- INTRODUCCIÓN -->
+    <!-- MENÚ -->
 
-    <div class="destacado">
+    <div id="menu">
+
+        <ul>
+
+            <li>
+                <a href="enlace-1.html">
+                    DISEÑO Y DESARROLLO WEB
+                </a>
+            </li>
+
+            <li>
+                <a href="enlace-2.html">
+                    PROGRAMACIÓN BASE DE DATOS
+                </a>
+            </li>
+
+            <li>
+                <a href="enlace-3.html">
+                    SISTEMA OPERATIVO
+                </a>
+            </li>
+
+            <li>
+                <a href="enlace-4.html">
+                    SOPORTE TÉCNICO
+                </a>
+            </li>
+
+            <li>
+                <a href="enlace-5.html">
+                    APLICACIONES OFIMÁTICA
+                </a>
+            </li>
+
+            <li>
+                <a href="enlace-6.html">
+                    FORMACIÓN Y ORIENTACIÓN LABORAL
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- CONTENIDO -->
+
+    <div id="contenido">
+
+        <h1>
+            Ejemplo: Uso del elemento &lt;div&gt;
+            y del atributo <i>id</i>
+        </h1>
 
         <p>
-            El <b>Diseño y Desarrollo Web</b> es el proceso de crear
-            y organizar páginas y sitios web para que sean atractivos,
-            fáciles de usar y funcionen correctamente.
+            El elemento &lt;div&gt; permite agrupar y organizar
+            diferentes elementos dentro de una página web.
+        </p>
+
+        <h2>¿Qué es &lt;div&gt;?</h2>
+
+        <p>
+            Es un contenedor que puede incluir textos, imágenes,
+            enlaces, listas y otros elementos HTML.
+        </p>
+
+        <h2>¿Qué es el atributo <i>id</i>?</h2>
+
+        <p>
+            El atributo <i>id</i> identifica de manera única
+            un elemento HTML. Permite aplicar estilos con CSS
+            y trabajar con elementos mediante JavaScript.
+        </p>
+
+        <div class="informacion">
+
+            <strong>Ejemplo:</strong>
+
+            <p>
+                En esta página utilizamos diferentes
+                <i>id</i> como:
+                <strong>contenedor, cabecera, menu,
+                contenido y pie.</strong>
+            </p>
+
+        </div>
+
+        <h2>Conclusión</h2>
+
+        <p>
+            El elemento &lt;div&gt; ayuda a organizar la página,
+            mientras que el atributo <i>id</i> permite identificar
+            cada sección y aplicar diferentes estilos.
         </p>
 
     </div>
 
 
-    <!-- ¿QUÉ SE APRENDE? -->
-
-    <h2>
-        ¿Qué se aprende en esta materia?
-    </h2>
-
-    <ul>
-
-        <li>Crear y organizar páginas web.</li>
-
-        <li>Diseñar la apariencia de un sitio.</li>
-
-        <li>Elegir colores, tipos de letra y fondos.</li>
-
-        <li>Colocar imágenes, videos y textos.</li>
-
-        <li>Crear menús y botones.</li>
-
-        <li>Organizar la información de una página.</li>
-
-        <li>Crear enlaces entre diferentes páginas.</li>
-
-        <li>Diseñar páginas para computadoras, tablets y celulares.</li>
-
-        <li>Mejorar la presentación y facilidad de uso de un sitio web.</li>
-
-    </ul>
-
-
-    <!-- PARTES DE UNA PÁGINA -->
-
-    <h2>
-        Partes de una página web
-    </h2>
-
-
-    <div class="seccion">
-
-        <h3>
-            Encabezado
-        </h3>
-
-        <p>
-            Es la parte superior de la página y puede contener
-            el nombre, logo o título.
-        </p>
-
-
-        <h3>
-            Menú
-        </h3>
-
-        <p>
-            Permite navegar por las diferentes partes del sitio
-            mediante enlaces.
-        </p>
-
-
-        <h3>
-            Contenido
-        </h3>
-
-        <p>
-            Contiene la información principal, como textos,
-            imágenes y videos.
-        </p>
-
-
-        <h3>
-            Pie de página
-        </h3>
-
-        <p>
-            Se encuentra al final de la página y puede incluir
-            información de contacto, derechos de autor u otros datos.
-        </p>
-
-    </div>
-
-
-    <!-- IMPORTANCIA -->
-
-    <h2>
-        Importancia
-    </h2>
-
-    <p>
-        El diseño web es importante porque permite presentar
-        información de forma <b>ordenada, clara y atractiva</b>.
-        Una buena página debe ser fácil de entender y utilizar.
-    </p>
-
-
-    <!-- CARACTERÍSTICAS -->
-
-    <h2>
-        Características de una buena página web
-    </h2>
-
-    <ul>
-
-        <li>Fácil de usar.</li>
-
-        <li>Buena organización.</li>
-
-        <li>Diseño atractivo.</li>
-
-        <li>Información clara.</li>
-
-        <li>Buena combinación de colores.</li>
-
-        <li>Texto fácil de leer.</li>
-
-        <li>Imágenes adecuadas.</li>
-
-        <li>Adaptable a diferentes dispositivos.</li>
-
-    </ul>
-
-
-    <!-- BOTÓN -->
-
-    <div class="button-container">
-
-        <a href="https://michaellcano024-code.github.io/Deber-de-Dise-o/">
-
-            <button>
-                Volver al menú principal
-            </button>
-
-        </a>
-
-    </div>
-
-
-    <!-- INFORMACIÓN DEL PROYECTO -->
-
-    <div class="footer">
-
-
-    </div>
-
-
-    <!-- PIE -->
+    <!-- PIE DE PÁGINA -->
 
     <div id="pie">
 
         <p>
-            <b>Diseño y Desarrollo Web</b>
+            <strong>ESTUDIANTES</strong>
             <br>
-            Cano Michaell &nbsp; | &nbsp; Macias Yolanda
+            Cano Michaell
             <br>
-            Curso: 3ro BT "B"
-        </p>
-   <p>
-            © 2026 Mi Sitio Web. Todos los derechos reservados.
+            Macias Yolanda
+            <br>
+            <strong>CURSO: 3ro BT "B"</strong>
+            <br>
+            Proyecto de Diseño y Desarrollo Web
+            <br>
+            © 2026
         </p>
 
     </div>
@@ -422,8 +310,6 @@
 
 </div>
 
-
 </body>
 
 </html>
-
